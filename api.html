@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minsmm.com/api</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">MIN SMM</h1>
+            <nav>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./pricing.html">Pricing</a></li>
+                    <li><a href="./api.html">Api</a></li>
+                    <li><a href="./login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="api-doc">
+        <div class="container">
+            <h2>API Documentation</h2>
+            <p>Welcome to the API Documentation. Use the following endpoints to interact with our services.</p>
+            <div class="api-endpoint">
+                <h3>1. Create a New Order</h3>
+                <p><strong>Endpoint:</strong> POST /api/order</p>
+                <p><strong>Request Body:</strong> <code>{ "service": "like", "quantity": 1000, "price": 20 }</code></p>
+                <p><strong>Response:</strong>
+                    <code>{ "status": "success", "message": "Order created successfully" }</code>
+                </p>
+                <p><strong>Status Code:</strong> 200 OK</p>
+            </div>
+
+            <div class="api-endpoint">
+                <h3>2. Get Order Status</h3>
+                <p><strong>Endpoint:</strong> GET /api/order/{order_id}</p>
+                <p><strong>Request Example:</strong> <code>/api/order/12345</code></p>
+                <p><strong>Response:</strong>
+                    <code>{ "status": "processing", "message": "Order is being processed" }</code>
+                </p>
+                <p><strong>Status Code:</strong> 200 OK</p>
+            </div>
+
+            <div class="api-endpoint">
+                <h3>3. Cancel Order</h3>
+                <p><strong>Endpoint:</strong> DELETE /api/order/{order_id}</p>
+                <p><strong>Request Example:</strong> <code>/api/order/12345</code></p>
+                <p><strong>Response:</strong>
+                    <code>{ "status": "success", "message": "Order canceled successfully" }</code>
+                </p>
+                <p><strong>Status Code:</strong> 200 OK</p>
+            </div>
+
+            <div class="api-endpoint">
+                <h3>4. List Available Services</h3>
+                <p><strong>Endpoint:</strong> GET /api/services</p>
+                <p><strong>Response:</strong> <code>{ "services": ["like", "comment", "follow", "share"] }</code></p>
+                <p><strong>Status Code:</strong> 200 OK</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Modern SMM. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
